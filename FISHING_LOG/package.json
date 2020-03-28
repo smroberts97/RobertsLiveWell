@@ -4,16 +4,21 @@
   "description": "fishing log",
   "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "",
+  "author": "Shannon Roberts",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
+    "create": "0.0.2",
     "express": "^4.17.1",
     "mongoose": "^5.9.6",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "react-app": "^1.1.2"
   }
 }
