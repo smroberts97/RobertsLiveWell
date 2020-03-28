@@ -1,4 +1,3 @@
-import uuid from 'uuid/v1';
 import { GET_FISHES, ADD_FISH, DELETE_FISH, FISHES_LOADING } from "../actions/types"
 
 
