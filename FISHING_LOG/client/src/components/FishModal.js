@@ -11,38 +11,37 @@ import {
 } from 'reactstrap';
 import { connect } from 'react-redux';
 import { addFish } from '../actions/fishActions';
-import uuid from 'uuid/v1';
+
 
 class FishModal extends Component {
     state = {
         modal: false,
         name: ''
-    }
+    };
 
     toggle = () => {
         this.setState({
             modal: !this.state.modal
         });
-    }
+    };
 
     onChange = (e) => {
         this.setState({ [e.target.name]: e.target.value });
-    }
+    };
 
     onSubmit = e => {
         e.preventDefault();
 
         const newFish = {
-            id: uuid(),
             name: this.state.name
-        }
+        };
 
         //add fish via addFish action
         this.props.addFish(newFish);
 
         //close modal
         this.toggle();
-    }
+    };
 
     render() {
         return(
