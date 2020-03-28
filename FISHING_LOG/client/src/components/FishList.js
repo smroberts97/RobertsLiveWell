@@ -27,7 +27,7 @@ class FishList extends Component {
                                 <ListGroupItem>
                                     <Button
                                     className="remove-btn"
-                                    color="danger"
+                                    color="primary"
                                     size="sm"
                                     onClick={this.onDeleteClick.bind(this, _id)}
                                     >&times;

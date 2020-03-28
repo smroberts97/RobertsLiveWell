@@ -25,7 +25,7 @@ export const addFish = (fish) => dispatch => {
 
 export const deleteFish = (id) => dispatch => {
     axios
-    .delete('/api/items/${id}')
+    .delete(`/api/items/${id}`)
     .then(res =>
         dispatch({
             type: DELETE_FISH,
@@ -33,8 +33,6 @@ export const deleteFish = (id) => dispatch => {
         })
     )  
 };
-
-
 
 export const setFishesLoading = () => {
     return {

@@ -10,7 +10,7 @@ const Fish = require('../../models/Fish');
 
 router.get('/', (req, res) => {
     Fish.find()
-        .sort({ date: -1})
+        .sort({ date: -1} )
         .then(fishes => res.json(fishes));
 });
 
@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
         name: req.body.name
     });
 
-    newFish.save().then(fish => res.json(item));
+    newFish.save().then(fish => res.json(fish));
 });
 
 // @route DELETE api/fishes/:id

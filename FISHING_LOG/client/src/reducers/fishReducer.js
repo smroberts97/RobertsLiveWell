@@ -15,12 +15,11 @@ export default function(state = initialState, action) {
                 loading: false
             };
         case DELETE_FISH:
-            return{
+            return {
                 ...state,
                 fishes: state.fishes.filter(fish => fish._id !== action.payload)
             };
-            default:
-                return state;
+            
         case ADD_FISH:
             return {
                 ...state,
@@ -30,6 +29,8 @@ export default function(state = initialState, action) {
             return {
                 ...state,
                 loading: true
-            }
+            };
+        default:
+            return state;
     }
 }

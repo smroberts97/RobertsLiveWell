@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const FishSchema = new Schema({
     name: {
         type: String,
-        requred: true
+        required: true
     },
     date: {
         type: Date,
